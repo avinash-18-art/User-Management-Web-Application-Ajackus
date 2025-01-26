@@ -1,0 +1,302 @@
+/* General Styles for the Body */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+/* App Wrapper */
+.app {
+  width: 95%;
+  max-width: 1300px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 2.4rem;
+  color: #3e3e3e;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  color: #666;
+}
+
+/* Button Styles */
+button {
+  padding: 12px 20px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: #007b9e;
+  transform: translateY(-2px);
+}
+
+button[type='button'] {
+  background-color: #e74c3c;
+}
+
+button[type='button']:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* User List Table */
+.user-list {
+  width: 100%;
+  margin-top: 40px;
+  overflow-x: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+table:hover {
+  transform: scale(1.01);
+}
+
+th,
+td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 2px solid #f0f0f0;
+  font-size: 16px;
+}
+
+th {
+  background-color: #fafafa;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+}
+
+td {
+  background-color: #ffffff;
+  color: #555;
+}
+
+tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+tr:hover td {
+  background-color: #e9e9e9;
+}
+
+.actions-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 16px;
+  margin-right: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: modal-in 0.3s ease-out;
+}
+
+@keyframes modal-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #e74c3c;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+input[type='text'],
+input[type='email'] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+input[type='text']:focus,
+input[type='email']:focus {
+  border-color: #008cba;
+  outline: none;
+}
+
+button[type='submit'] {
+  background-color: #008cba;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+}
+
+button[type='submit']:hover {
+  background-color: #007b9e;
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .modal {
+    width: 85%;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .user-list {
+    margin-top: 20px;
+  }
+
+  .actions-button {
+    flex-direction: column;
+  }
+
+  .edit-button,
+  .delete-button {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}
